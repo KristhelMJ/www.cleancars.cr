@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CleanCars - Lavado de Vehículos a Domicilio</title>
+
+    <!-- Bootstrap 4.5.2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--====== MENÚ DE NAVEGACIÓN ======-->
+    <header class="header_area">
+        <div class="header_navbar" id="navbar-principal">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand page-scroll" href="#inicio">
+                        <img src="assets/img/logo.png" alt="Logo CleanCars" class="logo_cleancars">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                        <ul id="nav" class="navbar-nav ml-auto">
+                            <li class="nav-item active"><a class="page-scroll" href="#inicio">Inicio</a></li>
+                            <li class="nav-item"><a class="page-scroll" href="#paquetes">Paquetes</a></li>
+                            <li class="nav-item"><a class="page-scroll" href="#cobertura">Cobertura</a></li>
+                            <li class="nav-item"><a class="page-scroll" href="#seguro">Seguro</a></li>
+                            <li class="nav-item"><a class="page-scroll" href="#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--====== 1. SECCIÓN INICIO + GALERÍA ======-->
+    <section id="inicio" class="inicio_seccion">
+        <div class="hero_area d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-10">
+                        <div class="hero_content">
+                            <p class="mb-2 font-italic">¡Bienvenido a CleanCars!</p>
+                            <h1>“Tu auto limpio, estés donde estés”</h1>
+                            <p>Un servicio de lavado de vehículos a domicilio, ubicado en Pérez Zeledón. Será un gusto ofrecerle atención personalizada y calidad en cada detalle.</p>
+                            <a href="#paquetes" class="main-btn page-scroll">Ver Paquetes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="descripcion_servicio">
+            <div class="container">
+                <div class="descripcion_servicio_content">
+                    <h2>CleanCars</h2>
+                    <p>Un servicio de lavado de vehículos a domicilio, ubicado en Pérez Zeledón. Será un gusto ofrecerle atención personalizada y calidad en cada detalle.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="galeria-slider" class="carousel slide galeria_slider" data-ride="carousel" data-interval="4000">
+                <ol class="carousel-indicators">
+                    <li data-target="#galeria-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#galeria-slider" data-slide-to="1"></li>
+                    <li data-target="#galeria-slider" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/galeria.jpg" class="d-block w-100 slide_img" alt="Lavado exterior CleanCars">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Lavado Detallado a Domicilio</h5>
+                            <p>Cuidamos cada rincón de tu vehículo en Pérez Zeledón.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="assets/img/galeriaa.jpg" class="d-block w-100 slide_img" alt="Limpieza interior">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Limpieza Profunda de Interiores</h5>
+                            <p>Productos especializados para tapicería y tablero.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="assets/img/galeriaaa.jpg" class="d-block w-100 slide_img" alt="Acabado brillante">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Resultados Impecables</h5>
+                            <p>Tu auto limpio, estés donde estés.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#galeria-slider" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#galeria-slider" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!--====== 2. SECCIÓN PAQUETES Y SERVICIOS EXTRA ======-->
+    <section id="paquetes">
+        <div class="paquetes_fondo seccion_espacio">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center mb-4">
+                        <h2 class="titulo_azul_oscuro">PAQUETES</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-9" id="acordeonPaquetes">
+
+                        <!-- PAQUETE 1: Lavado Flash -->
+                        <div class="paquete_item paquete_blanco mb-3">
+                            <div class="paquete_header d-flex align-items-center justify-content-between" data-toggle="collapse"
+                                data-target="#collapseFlash" aria-expanded="false" aria-controls="collapseFlash">
+                                <div class="d-flex align-items-center">
+                                    <div class="paquete_icono mr-3">
+                                        <img src="assets/img/rayo.svg" alt="Icono Flash">
+                                    </div>
+                                    <div>
+                                        <span class="paquete_nombre d-block">Lavado Flash</span>
+                                        <span class="paquete_precio">₡10 000</span>
+                                    </div>
+                                </div>
+                                <span class="paquete_flecha">&#9662;</span>
+                            </div>
+                            <div id="collapseFlash" class="collapse" data-parent="#acordeonPaquetes">
+                                <div class="paquete_body">
+                                    <p class="mb-2">Lavado rápido y eficiente para mantener tu vehículo limpio.</p>
+                                    <ul class="mb-0 pl-3">
+                                        <li>Prelavado</li>
+                                        <li>Lavado con shampoo premium</li>
+                                        <li>Limpieza de cara frontal de aros y llantas</li>
+                                        <li>Vidrios internos y externos</li>
+                                        <li>Interior Standard + Sanitización Antibacterial</li>
+                                        <li>Secado</li>
+                                    </ul>
+                                    <a href="https://wa.me/50684337144?text=Buenas%20quiero%20consultar%20por%20el%20lavado%20flash!" target="_blank" rel="noopener noreferrer" class="btn_agendar" aria-label="Agendar lavado Flash por WhatsApp">AGENDAR</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PAQUETE 2: Lavado Integral -->
+                        <div class="paquete_item paquete_azul mb-3">
+                            <div class="paquete_header d-flex align-items-center justify-content-between" data-toggle="collapse"
+                                data-target="#collapseIntegral" aria-expanded="false" aria-controls="collapseIntegral">
+                                <div class="d-flex align-items-center">
+                                    <div class="paquete_icono mr-3">
+                                        <img src="assets/img/gota.svg" alt="Icono agua">
+                                    </div>
+                                    <div>
+                                        <span class="paquete_nombre d-block">Lavado Integral</span>
+                                        <span class="paquete_precio">₡17 000</span>
+                                    </div>
+                                </div>
+                                <span class="paquete_flecha">&#9662;</span>
+                            </div>
+                            <div id="collapseIntegral" class="collapse" data-parent="#acordeonPaquetes">
+                                <div class="paquete_body">
+                                    <p class="mb-2">Lavado completo para mantener tu vehículo en perfectas condiciones.</p>
+                                    <ul class="mb-0 pl-3">
+                                        <li>Prelavado</li>
+                                        <li>Lavado con shampoo premium</li>
+                                        <li>Lavado y acondicionamiento de aros y llantas</li>
+                                        <li>Interior Standard + Sanitización Antibacterial</li>
+                                        <li>Vidrios internos y externos</li>
+                                        <li>Protección de plásticos</li>
+                                        <li>Cera con efecto sheeting</li>
+                                        <li>Secado</li>
+                                    </ul>
+                                    <a href="https://wa.me/50684337144?text=Buenas%20quiero%20consultar%20por%20el%20lavado%20integral!" target="_blank" rel="noopener noreferrer" class="btn_agendar" aria-label="Agendar lavado integral por WhatsApp">AGENDAR</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PAQUETE 3: Lavado Full Shine -->
+                        <div class="paquete_item paquete_blanco mb-3">
+                            <div class="paquete_header d-flex align-items-center justify-content-between" data-toggle="collapse"
+                                data-target="#collapseFull" aria-expanded="false" aria-controls="collapseFull">
+                                <div class="d-flex align-items-center">
+                                    <div class="paquete_icono mr-3">
+                                        <img src="assets/img/carro.svg" alt="Icono carro">
+                                    </div>
+                                    <div>
+                                        <span class="paquete_nombre d-block">Lavado Full Shine</span>
+                                        <span class="paquete_precio">₡20 000</span>
+                                    </div>
+                                </div>
+                                <span class="paquete_flecha">&#9662;</span>
+                            </div>
+                            <div id="collapseFull" class="collapse" data-parent="#acordeonPaquetes">
+                                <div class="paquete_body">
+                                    <p class="mb-2">Lavado completo con acabado premium.</p>
+                                    <ul class="mb-0 pl-3">
+                                        <li>Prelavado</li>
+                                        <li>Lavado con shampoo premium</li>
+                                        <li>Lavado, acondicionamiento y descontaminación de aros y llantas</li>
+                                        <li>Interior Pro + Sanitización Antibacterial</li>
+                                        <li>Interior ThermoClean</li>
+                                        <li>Vidrios internos y externos</li>
+                                        <li>Protección de plásticos</li>
+                                        <li>Cera con efecto sheeting</li>
+                                        <li>Aspirado</li>
+                                        <li>Secado</li>
+                                    </ul>
+                                    <a href="https://wa.me/50684337144?text=Buenas%20quiero%20consultar%20por%20el%20lavado%20Full%20Shine!" target="_blank" rel="noopener noreferrer" class="btn_agendar" aria-label="Agendar lavado Full Shine por WhatsApp">AGENDAR</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="servicios_extra_fondo seccion_espacio">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mb-5">
+                        <h2 class="titulo_azul_oscuro">SERVICIOS EXTRA</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="tarjeta_extra text-center">
+                            <img src="assets/img/motor.jpg" alt="Limpieza de motor" class="extra_img_circular mx-auto mb-3">
+                            <h5>Limpieza de motor</h5>
+                            <p>Lavado con vapor que elimina suciedad y grasa, cuidando los componentes eléctricos. <strong>El precio varía según estado del motor.</strong></p>
+                            <a href="https://wa.me/50684337144?text=Buenas%20me%20interesa%20el%20servicio%20extra%20de%20limpieza%20de%20motor." target="_blank" rel="noopener noreferrer" class="btn_agendar" aria-label="Agendar limpieza de motor por WhatsApp">AGENDAR</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="tarjeta_extra text-center">
+                            <img src="assets/img/cera.jpg" alt="Aplicación de cera hidrófuga" class="extra_img_circular mx-auto mb-3">
+                            <h5>Aplicación de cera hidrófuga</h5>
+                            <p>Brillo profundo y protección. Con efecto water sheeting. Valor de <strong>₡5.000</strong>.</p>
+                            <a href="https://wa.me/50684337144?text=Buenas%20me%20interesa%20el%20servicio%20extra%20de%20aplicaci%C3%B3n%20de%20cera%20hidr%C3%B3fuga." target="_blank" rel="noopener noreferrer" class="btn_agendar" aria-label="Agendar aplicación de cera hidrófuga por WhatsApp">AGENDAR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner_promo text-center mt-4">
+                ¡¡POR CADA 6 LAVADOS LLEVA 1 GRATIS!!
+            </div>
+        </div>
+    </section>
+
+    <!--====== 3. SECCIÓN COBERTURA ======-->
+    <section id="cobertura" class="cobertura_seccion">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-4">
+                    <h2 class="titulo_cobertura">COBERTURA</h2>
+                    <p class="subtitulo_cobertura">
+                        CleanCars llega hasta tu hogar para brindarte comodidad y un servicio eficiente. Si eres de Pérez Zeledón, busca tu ubicación para saber el precio del transporte según tu zona:
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-7 col-md-9">
+                    <form id="form-buscador" class="buscador_caja d-flex align-items-center">
+                        <span class="icono_lupa pl-3 pr-2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#035388" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </span>
+
+                        <input type="text" id="input-lugar" list="zonas-pz" class="form-control buscador_input"
+                            placeholder="Buscar barrio o lugar (ej. Palmares, Daniel Flores, Sinaí...)" required>
+
+                        <datalist id="zonas-pz">
+                            <option value="San Isidro Centro">
+                            <option value="Daniel Flores">
+                            <option value="Palmares">
+                            <option value="Barrio Sinaí">
+                            <option value="Barrio Boston">
+                            <option value="Barrio Morazán">
+                            <option value="Barrio Las Américas">
+                            <option value="Barrio Cooperativa">
+                            <option value="Villa Ligia">
+                            <option value="Quebradas">
+                            <option value="Pedregoso">
+                            <option value="General Viejo">
+                            <option value="Rivas">
+                            <option value="Pejibaye">
+                            <option value="Platanares">
+                            <option value="Cajón">
+                            <option value="San Pedro">
+                        </datalist>
+
+                        <button type="button" id="btn-limpiar" class="btn_limpiar d-none" title="Limpiar búsqueda">&times;</button>
+                        <button type="submit" id="btn-buscar" class="btn_buscar">Buscar</button>
+                    </form>
+
+                    <div id="resultado-zona" class="alerta_zona mt-3 d-none"></div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div id="mapa-cobertura"></div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 col-md-10">
+                    <div class="leyenda_cobertura d-flex flex-wrap justify-content-center">
+                        <div class="leyenda_item mr-4 mb-2">
+                            <span class="punto_color punto_verde"></span>
+                            <span>Transporte gratis</span>
+                        </div>
+                        <div class="leyenda_item mr-4 mb-2">
+                            <span class="punto_color punto_amarillo"></span>
+                            <span>Tarifa extra</span>
+                        </div>
+                        <div class="leyenda_item mb-2">
+                            <span class="punto_color punto_rojo"></span>
+                            <span>No disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== 4. SECCIÓN SEGURO Y HORARIO ======-->
+    <section id="seguro">
+        <div class="seguro_bloque text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-9">
+                        <h2 class="titulo_azul_oscuro mb-3">SEGURO</h2>
+                        <p class="seguro_texto m-0">
+                            CleanCars cuenta con un seguro de daños a la propiedad con el fin de darte tranquilidad y respaldo frente a posibles accidentes que puedan dañar tu vehículo o propiedad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="horario_bloque text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 col-md-9">
+                        <h2 class="text-white mb-3">HORARIO</h2>
+                        <p class="horario_dias mb-1">Lunes a Viernes: <strong>7:00 am - 3:00 pm</strong></p>
+                        <p class="horario_nota m-0"><strong>Se trabaja únicamente bajo cita previa.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!--====== TESTIMONIOS ======-->
+    <section id="testimonios" class="reviews-section" aria-labelledby="reviews-title">
+        <div class="reviews-header">
+            <p class="reviews-subtitle">Testimonios</p>
+            <h2 id="reviews-title" class="reviews-title">Lo que dicen nuestros clientes:</h2>
+        </div>
+
+        <div class="reviews-marquee-wrapper" id="marqueeWrapper" role="region" aria-label="Opiniones de clientes" tabindex="0">
+            <div class="reviews-marquee-track" id="marqueeTrack"></div>
+        </div>
+
+        <div class="reviews-cta">
+            <button type="button" class="reviews-open-modal" id="openModalBtn">
+                <svg class="reviews-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                </svg>
+                <span>Dejar mi opinión</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="reviews-modal-backdrop" id="ratingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="reviews-modal-card">
+            <div class="reviews-modal-header">
+                <h3 id="modalTitle" class="reviews-modal-title">Calificar servicio</h3>
+                <button type="button" class="reviews-modal-close" id="closeModalBtn" aria-label="Cerrar ventana">&times;</button>
+            </div>
+
+            <p class="reviews-modal-description">Tu opinión nos ayuda a mantener la calidad de CleanCars.</p>
+
+            <form id="ratingForm" class="reviews-form" novalidate>
+                <div class="reviews-form-group">
+                    <label class="reviews-form-label" id="ratingLabel">TU CALIFICACIÓN</label>
+                    <div class="reviews-star-rating" role="radiogroup" aria-labelledby="ratingLabel" id="starRating">
+                        <button type="button" class="reviews-star-btn active" data-value="1" aria-label="1 estrella" aria-checked="false" role="radio" tabindex="-1">&#9733;</button>
+                        <button type="button" class="reviews-star-btn active" data-value="2" aria-label="2 estrellas" aria-checked="false" role="radio" tabindex="-1">&#9733;</button>
+                        <button type="button" class="reviews-star-btn active" data-value="3" aria-label="3 estrellas" aria-checked="false" role="radio" tabindex="-1">&#9733;</button>
+                        <button type="button" class="reviews-star-btn active" data-value="4" aria-label="4 estrellas" aria-checked="false" role="radio" tabindex="-1">&#9733;</button>
+                        <button type="button" class="reviews-star-btn active" data-value="5" aria-label="5 estrellas" aria-checked="true" role="radio">&#9733;</button>
+                    </div>
+                    <input type="hidden" id="ratingValue" name="rating" value="5">
+                </div>
+
+                <div class="reviews-form-group">
+                    <label for="clientName" class="reviews-form-label">TU NOMBRE</label>
+                    <input type="text" id="clientName" name="name" class="reviews-form-input" placeholder="Ej. Amanda Ríos" maxlength="60" required>
+                    <span class="reviews-error" id="nameError" aria-live="polite"></span>
+                </div>
+
+                <div class="reviews-form-group">
+                    <label for="clientComment" class="reviews-form-label">TU TESTIMONIO</label>
+                    <textarea id="clientComment" name="comment" class="reviews-form-textarea" rows="3" maxlength="160" placeholder="Ej. Excelente atención a domicilio y puntualidad" required></textarea>
+                    <span class="reviews-error" id="commentError" aria-live="polite"></span>
+                </div>
+
+                <span class="reviews-error" id="reviewsStorageError" aria-live="polite"></span>
+
+                <div class="reviews-modal-actions">
+                    <button type="button" class="reviews-btn-cancel" id="cancelModalBtn">Cancelar</button>
+                    <button type="submit" class="reviews-btn-submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--====== 5. SECCIÓN CONTACTO ======-->
+    <section id="contacto" class="contacto_celeste">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-5 col-md-6 text-center py-5">
+                    <h2 class="titulo_azul_oscuro mb-4">Contáctanos</h2>
+                    <a href="https://wa.me/50684337144?text=Hola%20muy%20buenas!%20me%20interesa%20contratar%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="btn_whatsapp_grande">
+                        Háblanos por WhatsApp
+                    </a>
+                </div>
+
+                <div class="col-lg-5 col-md-6 text-center align-self-end pt-4">
+                    <div class="espacio_celular_placeholder">
+                        <img src="assets/img/celular.png" alt="Contacto CleanCars" class="img-fluid img_celular">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== FOOTER ======-->
+    <footer class="footer_cleancars">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                    <div class="footer_logo mb-3">
+                        <h3 class="text-white m-0"><em>CleanCars</em></h3>
+                    </div>
+
+                    <p class="footer_lema mb-4">
+                        <em>Invierte mejor tu tiempo y mantén tu carro<br>más limpio que nunca.</em>
+                    </p>
+
+                    <p class="font-weight-bold text-white mb-3">¡Síguenos!</p>
+
+                    <div class="footer_redes d-flex">
+                        <a href="https://wa.me/50684337144?text=Hola%20muy%20buenas!%20me%20interesa%20contratar%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="icono_placeholder mr-3" title="WhatsApp">
+                            <img src="assets/img/basil_whatsapp-solid.svg" alt="WhatsApp">
+                        </a>
+                        <a href="https://www.instagram.com/cleancars_pz?utm_source=qr&psln=YTc5MDZoa2R2MWt2" target="_blank" rel="noopener noreferrer" class="icono_placeholder mr-3" title="Instagram">
+                            <img src="assets/img/basil_instagram-solid.svg" alt="Instagram">
+                        </a>
+                        <a href="mailto:contacto@cleancars.cr" class="icono_placeholder" title="Correo">
+                            <img src="assets/img/garden_email-fill-20.svg" alt="Correo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-5 offset-lg-1">
+                    <h5 class="text-white font-weight-bold mb-4">Navegación</h5>
+                    <ul class="footer_nav list-unstyled">
+                        <li><a class="page-scroll" href="#inicio">Inicio</a></li>
+                        <li><a class="page-scroll" href="#paquetes">Paquetes</a></li>
+                        <li><a class="page-scroll" href="#cobertura">Cobertura</a></li>
+                        <li><a class="page-scroll" href="#seguro">Seguro</a></li>
+                        <li><a class="page-scroll" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="zw-wa">
+        <div id="zw-wa-bubble" hidden>
+            <button type="button" id="zw-wa-close" aria-label="Cerrar">&times;</button>
+            <p>¡Hola! 👋 ¿En qué te podemos ayudar?</p>
+            <a id="zw-wa-credit" href="https://zodway.com/herramientas/boton-whatsapp-para-web" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+        <a id="zw-wa-btn" href="https://wa.me/50684337144?text=Hola%20muy%20buenas!%20me%20interesa%20contratar%20sus%20servicios." target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- JS principal -->
+    <script src="script.js"></script>
+</body>
+
+</html>
