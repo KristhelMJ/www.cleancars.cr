@@ -366,7 +366,7 @@ const BASE_LAT = 9.353863;
             rating: 5
         },
         {
-            name: "luis Mendoza",
+            name: "Luis Mendoza",
             comment: "Dejaron el auto impecable por dentro y por fuera",
             rating: 5
         },
